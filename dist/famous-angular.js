@@ -542,7 +542,7 @@ angular.module('famous.angular')
             //hide the element on animate.leave
             if(operation === 'leave' && $famous.util.isFaElement(element)){
               var isolate = _getIsolate(elemScope);
-              if(isolate && isolate.id) isolate.hide();
+              if(isolate && isolate.id && isolate.hasOwnProperty('hide')) isolate.hide();
             }
 
             // Abort if the done callback has already been invoked
