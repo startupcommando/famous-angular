@@ -205,7 +205,7 @@ ngFameApp.provider('$famous', function() {
    * @return {boolean}
    */
     isASurface : function (element) {
-
+      if(!element[0]) return false;
       return IS_A_SURFACE.test(element[0].tagName);
     },
 
